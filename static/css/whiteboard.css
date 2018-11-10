@@ -1,0 +1,218 @@
+
+/* Css for whiteboard */
+/* #canvas {
+    width: 1000;
+    height: 1000;
+    margin: 0px;
+    border: 0;
+    overflow: hidden;
+    display: block;
+
+
+  } */
+
+  #canvas{
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    background-color: #FFF;
+    box-shadow: 0 9px 20px -5px rgba(0,0,0,0.8);
+
+  }
+
+
+/* Css for bottom icon bar */
+body {margin:0;}
+
+.icon-bar {
+    width: 50%;
+    background-color: rgba(25, 0, 0, 0.5);
+    overflow: auto;
+    margin: auto;
+    bottom: 5px;
+    position: fixed;
+    padding: 5px;
+    left: 25%;
+
+    /* #555;   rgba(255, 0, 0, 0.5); */
+}
+
+.icon-bar button {
+    float: left;
+    width: 10%;
+    text-align: center;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+    background-color: rgb(107, 117, 108);
+
+}
+
+.icon-bar button:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50 !important;
+}
+
+
+
+
+/* Css for top tool bar */
+body {margin:0;}
+
+.top-tool-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    margin: auto;
+
+    position: fixed;
+    padding: 5px;
+    top: 5px;
+    border-radius: 20px;
+    margin-top: 59px;
+    /* left: 25%; */
+    /* #555; */
+
+
+
+}
+
+.top-tool-bar button {
+    float: left;
+    width: 60px;
+    text-align: center;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+    background-color: transparent;
+
+
+}
+
+.top-tool-bar button:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50 !important;
+}
+
+/* .top-tool-bar .btn-group-color button {
+
+    height: 20px;
+    width: 20px;
+}
+
+.top-tool-bar .btn-group-color #red {
+    background-color: red;
+}
+.top-tool-bar .btn-group-color #green {
+    background-color: green;
+}
+.top-tool-bar .btn-group-color #blue {
+    background-color: blue;
+}
+.top-tool-bar .btn-group-color #yellow {
+    background-color: yellow;
+}
+.top-tool-bar .color-group {
+    background-color: transparent;
+    width: 80px;
+    text-align: center;
+
+
+} */
+
+.top-tool-bar .color-group select {
+    background-color: teal;
+
+    height: 50px;
+}
+.top-tool-bar .color-group select option {
+
+    height: 50px;
+}
+
+table.tool{
+    table-layout: auto;
+    width: 100%;
+}
+th.colordots {
+    
+    width: 31%;
+    border: 3px solid #AF1515;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+/* styles for canvas background image changing Model */
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+/* closed button in background image changing Model */
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+.ruledback{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 110px;
+}
+
+.ruledback:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+

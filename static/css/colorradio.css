@@ -1,0 +1,36 @@
+#colorSwatch {
+	position: relative;
+	 bottom: 0px;
+	/* right: 20px;  */
+}
+
+
+input[type=radio] {
+	margin: 0;
+	display: none;
+	width: 0;
+}
+input[type=radio]:checked + label::after {
+	content: '\2712';
+	position: absolute;
+	left: 8px;
+}
+
+#colradio  {
+	display: inline-block; 
+	width: 48px; height: 48px; 
+	position: relative;
+	padding-right: 5px;
+	border-radius: 50%;
+	text-shadow: 1px 1px 2px #000;
+	color: #fff;
+	font-size: 32px;
+	line-height: 46px;
+}
+label[for=color01] {background: black;}
+label[for=color02] {background: gold;}
+label[for=color03] {background: darkorange;}
+label[for=color04] {background: navy;}
+label[for=color05] {background: yellowgreen;}
+label[for=color06] {background: firebrick;}
+label[for=color07] {background: powderblue;}
