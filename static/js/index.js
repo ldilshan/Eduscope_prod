@@ -84,8 +84,6 @@ eduscope.controller('buttonController', function($scope,$window, Fullscreen){
         {id: "3", type: 'audio' }
     ];
 
-
-
     $scope.setRegisterState = function(nextState) {
         switch (nextState) {
         case NOT_REGISTERED:
@@ -136,6 +134,7 @@ eduscope.controller('buttonController', function($scope,$window, Fullscreen){
     }
 
     $scope.onload = function(){
+        $scope.muteVisible = true;
         $scope.setRegisterState(NOT_REGISTERED);
         var drag = new Draggabilly(document.getElementById('videoSmall'));
 
@@ -279,6 +278,7 @@ eduscope.controller('buttonController', function($scope,$window, Fullscreen){
 
         $scope.stopVisible = true;
         $scope.callVisible = false;
+
         if (callState != NO_CALL) {
             var response = {
                 id : 'incomingCallResponse',
@@ -311,8 +311,6 @@ eduscope.controller('buttonController', function($scope,$window, Fullscreen){
         onicecandidate : onIceCandidate,
         mediaConstraints : constraints
     }
-
-
 
             webRtcPeer = kurentoUtils.WebRtcPeer.WebRtcPeerSendrecv(options,
                     function(error) {
@@ -370,6 +368,8 @@ eduscope.controller('buttonController', function($scope,$window, Fullscreen){
     }
 
     $scope.call = function(data) {
+
+
         if (document.getElementById('peer').value == '') {
             window.alert("You must specify the peer name");
             return;
@@ -501,10 +501,23 @@ eduscope.controller('buttonController', function($scope,$window, Fullscreen){
 
     $scope.mute = function(){
 
-       var videoInput = document.getElementById("videoInput");
-       var  videoOutput = document.getElementById("videoOutput");
+       videoInput = document.getElementById("videoInput");
+       videoOutput = document.getElementById("videoOutput");
        videoInput.muted = true;
        videoOutput.muted = true;
+
+       $scope.muteVisible = false;
+       $scope.unmuteVisible = true;
+
+    }
+    $scope.unmute = function(){
+        var videoInput = document.getElementById("videoInput");
+        var  videoOutput = document.getElementById("videoOutput");
+        videoInput.muted =false;
+        videoOutput.muted = false;
+
+        $scope.unmuteVisible = false;
+        $scope.muteVisible = true;
     }
         // $scope.setting = function(){
 

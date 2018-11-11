@@ -305,7 +305,8 @@
                     <div class="button-bar" >
 
                         <div class="btn-group">
-                            <button title="Mute/Unmute" ng-click="mute()"> <i class="fa fa-microphone"  style="font-size:36px"></i></button>
+                            <button title="Unmute" ng-click="unmute()" ng-show="unmuteVisible"> <i class="fa fa-microphone"  style="font-size:36px;color:black"></i></button>
+                            <button title="Mute" ng-click="mute()" ng-show="muteVisible"> <i class="fa fa-microphone"  style="font-size:36px"></i></button>
                             <button title="Start/Stop camera" ng-click="onOffVideocam()" id="buttonVideocam"><i class="fa fa-video-camera" style="font-size:36px"></i></button>
                             <button title="Call" name="call" ng-click="call(callingTypes)" ng-show="callVisible"><i class="material-icons" style="font-size:36px">call</i></button>
                             <button title="Call End" name="callEnd"  ng-click="stop()" ng-show="stopVisible"><i class="material-icons" style="font-size:36px;color:red">call_end</i></button>
